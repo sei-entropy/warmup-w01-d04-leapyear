@@ -1,14 +1,13 @@
 const isLeapYear = function(Theyear){
     let answer=" False ";
     let status ;
-    if ((Theyear % 4 === 0)||(Theyear % 100 !== 0))
+    if ((Theyear % 4 === 0)&&(Theyear % 400 === 0))
     {
-    
-        answer = " True The year divisible by 4 and divisible by 100";
+        answer = " True ";
         status = true;
-        if((status===true)&&(Theyear % 400 === 0)) {
+        if((status===true)&&(Theyear % 100 !== 0)) {
          
-            answer = " True The year divisible by 4 and 400 ";
+            answer = " True ";
     
     
         }
@@ -17,6 +16,8 @@ const isLeapYear = function(Theyear){
     
     
     }
+
+
     
     
     if (status===false){
